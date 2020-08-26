@@ -45,7 +45,7 @@ $(document).ready(function()
 				return
 			}
 			
-			$tabs.html(
+			$tabs.children().append(
 				'<li class="section">' +
 					'<a href="' + url + '" aria-label="Course Calendar" tabindex="0" title="Course Calendar">Calendar<i role="presentation"></i></a>' +
 				'</li>')

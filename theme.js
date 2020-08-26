@@ -20,6 +20,31 @@ $(document).ready(function()
 		// () { beepOne.play(); }); End Login Video
 	}
 	
+	function studentView()
+	{
+		try
+		{
+			const match = location.pathname.match(/\/courses\/(\d+)$/)
+			let url = '/calendar?include_contexts=course_'
+			
+			if(!match || !match[1])
+			{
+				console.warn('URL not recognized')
+				return
+			}
+			
+			url = url + match[1]
+			$('#section-tabs').html(
+				'<li class="section">' +
+					'<a href="' + url + '" aria-label="Course Calendar" class="calendar" tabindex="0" title="Course Calendar">Calendar<i class="nav-icon icon-off" role="presentation"></i></a>' +
+				'</li>')
+		}
+		catch(e)
+		{
+			console.error(e.message, e.stack)
+		}
+	}
+	
 	/**
 	 * Add user role classname to body tag
 	 */
@@ -92,6 +117,7 @@ $(document).ready(function()
 		var userSpecificTheme = {
 			[userType.USER]: function()
 			{
+				studentView()
 				// return redirectToAMBI()
 			},
 			[userType.TEACHER]: function() { return hideNavOptions() },

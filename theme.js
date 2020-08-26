@@ -35,17 +35,17 @@ $(document).ready(function()
 			
 			url = url + match[1]
 			
-			const tabs = $('#section-tabs')
+			const $tabs = $('#section-tabs')
 			
-			console.log('tabs', tabs)
+			console.log('$tabs.children()', $tabs.children())
 			
-			if(tabs.length < 1)
+			if($tabs.children().length < 1)
 			{
 				console.warn('no other links in menu')
 				return
 			}
 			
-			tabs.html(
+			$tabs.html(
 				'<li class="section">' +
 					'<a href="' + url + '" aria-label="Course Calendar" tabindex="0" title="Course Calendar">Calendar<i role="presentation"></i></a>' +
 				'</li>')

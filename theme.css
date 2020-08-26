@@ -5,7 +5,7 @@
 /* By default, hide the right nav column. Will be overridden in JS for non-users */
 #right-side-wrapper-disabled
 {
-    display: none
+    /*display: none*/
 }
 
 @media only screen and (min-width: 992px)

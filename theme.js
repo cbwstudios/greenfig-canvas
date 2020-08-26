@@ -37,11 +37,9 @@ $(document).ready(function()
 			
 			const $tabs = $('#section-tabs')
 			
-			console.log('$tabs.children()', $tabs.children())
-			
 			if($tabs.children().length < 1)
 			{
-				console.warn('no other links in menu')
+				console.warn('No other links in menu')
 				return
 			}
 			

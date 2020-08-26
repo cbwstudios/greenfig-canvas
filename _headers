@@ -1,2 +1,7 @@
 /theme.js
 	Access-Control-Allow-Origin: https://lms.ambi.school
+/*
+	Cache-Control: max-age=0
+	Cache-Control: no-cache
+	Cache-Control: no-store
+	Cache-Control: must-revalidate

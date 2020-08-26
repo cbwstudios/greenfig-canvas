@@ -9,7 +9,6 @@ $(document).ready(function()
 	const hasLogin = currentLocation.match(/login/g) != null
 	const isCourse = currentLocation.match(/courses/g) != null
 	const isProfile = currentLocation.match(/profile/g) != null
-	const $rightNavEl = $('#right-side-wrapper-disabled')
 	
 	function loginPageTheme()
 	{
@@ -22,11 +21,11 @@ $(document).ready(function()
 	}
 	
 	/**
-	 * Right nav is hidden by default in CSS. Override that setting for non-USER types
+	 * Add user role classname to body tag
 	 */
-	function displayRightNav()
+	function setUserRoleClass(name)
 	{
-		$rightNavEl.show()
+		$('body').addClass('user_role_'+name)
 	}
 	
 	function hideNavOptions()
@@ -95,26 +94,15 @@ $(document).ready(function()
 			{
 				// return redirectToAMBI()
 			},
-			[userType.TEACHER]: function()
-			{
-				displayRightNav()
-				return hideNavOptions()
-			},
-			[userType.ADMIN]: function()
-			{
-				displayRightNav()
-			},
-			[userType.ROOT_ADMIN]: function()
-			{
-				displayRightNav()
-			},
-			'default': function()
-			{
-				displayRightNav()
-			}
+			[userType.TEACHER]: function() { return hideNavOptions() },
+			[userType.ADMIN]: function() {},
+			[userType.ROOT_ADMIN]: function() {},
+			'default': function() {}
 		}
 		
 		console.log(getCurrentUserType())
+		setUserRoleClass(getCurrentUserType())
+		
 		return userSpecificTheme[getCurrentUserType()]()
 	}
 	

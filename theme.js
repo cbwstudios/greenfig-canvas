@@ -37,6 +37,8 @@ $(document).ready(function()
 			
 			const tabs = $('#section-tabs')
 			
+			console.log('tabs', tabs)
+			
 			if(tabs.length < 1)
 			{
 				console.warn('no other links in menu')

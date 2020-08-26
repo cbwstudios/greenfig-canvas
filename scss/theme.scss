@@ -42,7 +42,7 @@
 /***************************
 ** Courses for role 'user'
 ***************************/
-.home.pages.user_role_user {
+.pages[class*="course-context_"].user_role_user {
 	
 	.right-side-wrapper-disabled { display: none; }
 	

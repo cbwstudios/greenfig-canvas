@@ -1,11 +1,15 @@
 /* CSS Document */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap'); */
 
 /* By default, hide the right nav column. Will be overridden in JS for non-users */
 #right-side-wrapper-disabled
 {
     /*display: none*/
+}
+
+.course-title {
+	color: red;
 }
 
 @media only screen and (min-width: 992px)
@@ -182,12 +186,12 @@ li, p
 	border-bottom: 1px solid #B4B4B4;
 }
 
-/* font faces */
+/* font faces 
 @font-face
 {
 	font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	src: url('https://s3.amazonaws.com/ambi-static/fonts/lineto-circular-medium.ttf') format('truetype');
-}
+}*/
 
 *
 {

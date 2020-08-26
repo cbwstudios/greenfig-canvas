@@ -21,16 +21,24 @@
 	}
 }
 */
-/***************************
+/*************************************************
 ** Main Menu
-***************************/
+*************************************************/
 .ic-app-header__menu-list li:last-of-type {
+  display: none; }
+
+/*****************************************************
+** Courses for role 'admin/root-admin/teacher'
+*******************************************************/
+body:not(.home).pages.user_role_root_admin #right-side-wrapper-disabled,
+body:not(.home).pages.user_role_admin
+body:not(.home).pages.user_role_root_teacher #right-side-wrapper-disabled {
   display: none; }
 
 /***************************
 ** Courses for role 'user'
 ***************************/
-body:not(.home).pages.user_role_user #right-side-wrapper-disabled {
+.pages.user_role_user #right-side-wrapper-disabled {
   display: none; }
 
 .bullet-fun {

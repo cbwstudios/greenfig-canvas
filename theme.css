@@ -30,7 +30,7 @@
 /***************************
 ** Courses for role 'user'
 ***************************/
-.pages[class*="course-context_"].user_role_user .right-side-wrapper-disabled {
+.pages.user_role_user .right-side-wrapper-disabled {
   display: none; }
 
 .bullet-fun {

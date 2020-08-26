@@ -24,7 +24,7 @@ $(document).ready(function()
 	{
 		try
 		{
-			const match = location.pathname.match(/\/courses\/(\d+)\/.*$/)
+			const match = location.pathname.match(/\/courses\/(\d+)(\/.*)?/)
 			let url = '/calendar?include_contexts=course_'
 			
 			if(!match || !match[1])

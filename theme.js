@@ -34,9 +34,18 @@ $(document).ready(function()
 			}
 			
 			url = url + match[1]
-			$('#section-tabs').html(
+			
+			const tabs = $('#section-tabs')
+			
+			if(tabs.length < 1)
+			{
+				console.warn('no other links in menu')
+				return
+			}
+			
+			tabs.html(
 				'<li class="section">' +
-					'<a href="' + url + '" aria-label="Course Calendar" class="calendar" tabindex="0" title="Course Calendar">Calendar<i class="nav-icon" role="presentation"></i></a>' +
+					'<a href="' + url + '" aria-label="Course Calendar" tabindex="0" title="Course Calendar">Calendar<i role="presentation"></i></a>' +
 				'</li>')
 		}
 		catch(e)

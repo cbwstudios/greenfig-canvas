@@ -1,369 +1,248 @@
-/* CSS Document */
+/* Original Imports.  Now moved to imports file.
 
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap'); */
-
-/* By default, hide the right nav column. Will be overridden in JS for non-users */
-#right-side-wrapper-disabled
-{
-    /*display: none*/
-}
-
-.pages.show .course-title {
-	color: red;
-}
-
-@media only screen and (min-width: 992px)
-{
-	body:not(.course-menu-expanded) .ic-app-main-content__secondary
-	{
-		width: auto;
-		padding-left: 24px;
-	}
-}
-
-.bullet-fun
-{
-    list-style-image: url('https://lms.ambi.school/users/106/files/4038/preview?verifier=jk4Ve34tP53iff6OgK8kPXmHpkySSnKvnBzAAxOp');
-}
-
-.bullet-fun li
-{margin-bottom: 10px;}
-
-strong
-{
-	font-weight: 600;
-}
-
-.ic-Login__link
-{
-	display: block !important;
-}
-
-.ic-flash-success
-{
-	display: none;
-}
-
-.ic-DashboardCard__header_hero
-{
-	box-sizing: border-box;
-	height: 146px;
-	border: 1px solid rgba(0, 0, 0, 0.1);
-	opacity: 0.0;
-}
-
-#flash_message_holder
-{
-	display: none;
-}
-
-.ic-app-main-content__secondary
-{
-	width: auto;
-	/* padding-left: 24px; */
-}
-
-.ic-flash-info
-{
-	display: none;}
-
-.ic-Layout-contentMain
-{
-	margin-top: 35px;}
-
-.lms-sandbox
-{
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	padding-right: 29px;
-	padding-left: 0px;
-}
-
-body
-{
-	font-size: .9rem !important;
-}
-
-.menu-item__text
-{
-	font-size: 12px !important;
-}
-
-.pages.show .page-title
-{
-	font-size: 1.8em;
-	font-weight: 200;
-	margin: 15px 0;
-	color: #031A2B;
-}
-
-.heading-45
-{
-	font-size: 32px;
-	line-height: 42px;
-	font-weight: 500;
-}
-
-.heading-46
-{
-	font-size: 17px;
-	line-height: 28px;
-	font-weight: 600;
-}
-
-.paragraph-57
-{
-	color: #141414;
-	font-size: 15px;
-	line-height: 24px;
-}
-
-.lms-button.purp
-{
-	margin-top: 25px;
-	margin-bottom: 25px;
-	border-radius: 5px;
-	background-color: #A133C9;
-}
-
-.lms-button
-{
-	padding-right: 34px !important;
-	padding-left: 34px !important;
-	font-family: Montserrat, sans-serif;
-	font-size: 15px;
-	font-weight: 500;
-	text-decoration: none !important;
-}
-
-a.lms-button:hover
-{
-	color: #FFF !important;
-}
-
-.w-button
-{
-	display: inline-block;
-	padding: 9px 15px;
-	background-color: #3898EC;
-	color: #FFF;
-	border: 0;
-	line-height: inherit;
-	text-decoration: none;
-	cursor: pointer;
-	border-radius: 0;
-}
-
-.w-button a:hover
-{
-	color: #FFFFFF;}
-
-li, p
-{
-	color: #031A2B;
-	font-weight: 400;
-	font-family: 'Poppins', sans-serif;
-}
-
-.dms-lms-learning-outcomes
-{
-	margin-top: 10px;
-	margin-bottom: 37px;
-	border-top: 1px solid #B4B4B4;
-	padding-top: 12px;
-	padding-bottom: 30px;
-}
-
-.dms-lms-overview-img
-{
-	margin-left: 54px;
-}
-
-.dms-lms-learning-outcomes
-{
-	border-bottom: 1px solid #B4B4B4;
-}
-
-/* font faces 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
 @font-face
 {
 	font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	src: url('https://s3.amazonaws.com/ambi-static/fonts/lineto-circular-medium.ttf') format('truetype');
-}*/
-
-*
-{
-	font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
 }
+
+*/
+@media only screen and (min-width: 992px) {
+  body:not(.course-menu-expanded) .ic-app-main-content__secondary {
+    width: auto;
+    padding-left: 24px; } }
+.bullet-fun {
+  list-style-image: url("https://lms.ambi.school/users/106/files/4038/preview?verifier=jk4Ve34tP53iff6OgK8kPXmHpkySSnKvnBzAAxOp"); }
+
+.bullet-fun li {
+  margin-bottom: 10px; }
+
+strong {
+  font-weight: 600; }
+
+.ic-Login__link {
+  display: block !important; }
+
+.ic-flash-success {
+  display: none; }
+
+.ic-DashboardCard__header_hero {
+  box-sizing: border-box;
+  height: 146px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  opacity: 0.0; }
+
+#flash_message_holder {
+  display: none; }
+
+.ic-app-main-content__secondary {
+  width: auto;
+  /* padding-left: 24px; */ }
+
+.ic-flash-info {
+  display: none; }
+
+.ic-Layout-contentMain {
+  margin-top: 35px; }
+
+.lms-sandbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 29px;
+  padding-left: 0px; }
+
+body {
+  font-size: .9rem !important; }
+
+.menu-item__text {
+  font-size: 12px !important; }
+
+.pages.show .page-title {
+  font-size: 1.8em;
+  font-weight: 200;
+  margin: 15px 0;
+  color: #031A2B; }
+
+.heading-45 {
+  font-size: 32px;
+  line-height: 42px;
+  font-weight: 500; }
+
+.heading-46 {
+  font-size: 17px;
+  line-height: 28px;
+  font-weight: 600; }
+
+.paragraph-57 {
+  color: #141414;
+  font-size: 15px;
+  line-height: 24px; }
+
+.lms-button.purp {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border-radius: 5px;
+  background-color: #A133C9; }
+
+.lms-button {
+  padding-right: 34px !important;
+  padding-left: 34px !important;
+  font-family: Montserrat, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none !important; }
+
+a.lms-button:hover {
+  color: #FFF !important; }
+
+.w-button {
+  display: inline-block;
+  padding: 9px 15px;
+  background-color: #3898EC;
+  color: #FFF;
+  border: 0;
+  line-height: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 0; }
+
+.w-button a:hover {
+  color: #FFFFFF; }
+
+li, p {
+  color: #031A2B;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif; }
+
+.dms-lms-learning-outcomes {
+  margin-top: 10px;
+  margin-bottom: 37px;
+  border-top: 1px solid #B4B4B4;
+  padding-top: 12px;
+  padding-bottom: 30px; }
+
+.dms-lms-overview-img {
+  margin-left: 54px; }
+
+.dms-lms-learning-outcomes {
+  border-bottom: 1px solid #B4B4B4; }
+
+* {
+  font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif !important; }
 
 /* main css */
-h1, h2, h3, h4, h5, p
-{
-	font-family: 'Poppins', sans-serif;
-}
+h1, h2, h3, h4, h5, p {
+  font-family: 'Poppins', sans-serif; }
 
 /* login page css */
-
 /*
   Note:
   disabling banner using the command given in bitnami docs is not working.
   Even any modifications to apache is not working. I'm not sure why.
   So, I'm disabling it here.
 */
-#bitnami-banner
-{
-	display: none;
-}
+#bitnami-banner {
+  display: none; }
 
-video#bgvid
-{
-	height: auto;
-	left: 50%;
-	min-height: 100%;
-	min-width: 100%;
-	position: fixed;
-	top: 50%;
-	transform: translateX(-50%) translateY(-50%);
-	width: auto;
-	z-index: -100;
-}
+video#bgvid {
+  height: auto;
+  left: 50%;
+  min-height: 100%;
+  min-width: 100%;
+  position: fixed;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: auto;
+  z-index: -100; }
 
-.video-dottedoverlay
-{
-	background-image: url("https://www.dropbox.com/s/jkwxjhqnt5gu5zz/gridtile2.png?dl=1");
-	background-repeat: repeat;
-	height: 100%;
-	left: 0;
-	position: absolute;
-	top: 0;
-	width: 100%;
-	z-index: 3;
-}
+.video-dottedoverlay {
+  background-image: url("https://www.dropbox.com/s/jkwxjhqnt5gu5zz/gridtile2.png?dl=1");
+  background-repeat: repeat;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 3; }
 
-
-video#bgvid
-{
-	transition: opacity 1s ease 0s;
-}
+video#bgvid {
+  transition: opacity 1s ease 0s; }
 
 /* oAuth Confirmation Screen */
+.ic-Login-confirmation__logo {
+  width: 140px;
+  height: 69px;
+  background: url("https://uploads-ssl.webflow.com/5b34459e3717ce1cbc5e47a0/5b344c2267f597818220ee11_greenfig-logo.png") no-repeat;
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 350px; }
 
-.ic-Login-confirmation__logo
-{
-	width: 140px;
-	height: 69px;
-	background: url("https://uploads-ssl.webflow.com/5b34459e3717ce1cbc5e47a0/5b344c2267f597818220ee11_greenfig-logo.png") no-repeat;
-	display: block;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	padding-left: 350px;
-}
-
-
-.ic-Login-confirmation__header
-{
-	background: #333;
-}
+.ic-Login-confirmation__header {
+  background: #333; }
 
 /* End of oAuth stuff */
+.ic-Login__content {
+  opacity: .9; }
 
-.ic-Login__content
-{
-	opacity: .9;
+.ic-Login {
+  justify-content: flex-end;
+  padding-right: 50px; }
 
-}
+.ic-Login-footer .ic-Login-footer__logo-link {
+  display: none; }
 
-.ic-Login
-{
+.ic-Login-footer .ic-Login-footer__links {
+  display: none; }
 
-	justify-content: flex-end;
-	padding-right: 50px;
+.ic-Login__link {
+  display: none; }
 
-}
+.ic-Login-header__links .ic-Login__link:first-of-type {
+  margin-top: 0;
+  display: none; }
 
-.ic-Login-footer .ic-Login-footer__logo-link
-{
-	display: none;
-}
+.ic-Login-header {
+  display: block;
+  padding: 10px 10px 10px 10px; }
 
-.ic-Login-footer .ic-Login-footer__links
-{
-	display: none;
-}
+.ic-Login-header__logo {
+  flex: 0 0 300px;
+  min-width: 1px; }
 
-.ic-Login__link
-{
-	display: none;
-}
+.ic-brand-Login-body-bgd-color {
+  background-color: none; }
 
-.ic-Login-header__links .ic-Login__link:first-of-type
-{
-	margin-top: 0;
-	display: none;
-}
-
-.ic-Login-header
-{
-	display: block;
-	padding: 10px 10px 10px 10px;
-}
-
-.ic-Login-header__logo
-{
-	flex: 0 0 300px;
-	min-width: 1px;
-}
-
-
-.ic-brand-Login-body-bgd-color
-{
-	background-color: none;
-}
-
-.ic-app-footer
-{
-	display: none;
-}
+.ic-app-footer {
+  display: none; }
 
 /* end of login page css */
-
 /* quizes question css */
-.question
-{
-	background-color: #FFF;
-	position: relative;
-	min-height: 50px;
-	margin: 0.7em auto 30px;
-	padding: 24px 32px;
-	border: 1px solid #F1F1F1;
-	border-radius: 14px;
-	box-shadow: 0 10px 20px 0 rgba(50, 62, 99, 0.04);
-	margin-bottom: 24px;
-}
+.question {
+  background-color: #FFF;
+  position: relative;
+  min-height: 50px;
+  margin: 0.7em auto 30px;
+  padding: 24px 32px;
+  border: 1px solid #F1F1F1;
+  border-radius: 14px;
+  box-shadow: 0 10px 20px 0 rgba(50, 62, 99, 0.04);
+  margin-bottom: 24px; }
 
-.question .header
-{
-	background-color: transparent;
-	border: none;
-}
+.question .header {
+  background-color: transparent;
+  border: none; }
 
 .question.multiple_choice_question .answer,
 .question.multiple_answers_question .answer,
 .question.matching_question .answer,
-.question.true_false_question .answer
-{
-	border: none;
-}
+.question.true_false_question .answer {
+  border: none; }
 
 /* end of quizzes css */
-
 /* HTML EDITOR ICON FIX css START */
-
-.mce-ico
-{
-
-	font-family: tinymce, Arial !important;
-}
-
+.mce-ico {
+  font-family: tinymce, Arial !important; }

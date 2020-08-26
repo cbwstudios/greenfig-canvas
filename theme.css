@@ -24,7 +24,7 @@
 /***************************
 ** Main Menu
 ***************************/
-.ic-app-header__menu-list ul li:last-of-type {
+.ic-app-header__menu-list li:last-of-type {
   display: none; }
 
 .bullet-fun {

@@ -29,6 +29,31 @@
 }
 */
 
+body {
+	
+	&:before {
+		content: "";
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		postion: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: black;
+	}
+	
+	.loaded:before { 
+		display: none;
+		transition: opacity 1s ease-out;
+    	opacity: 0;
+	}
+	
+}
+
+
+
 /*************************************************
 ** Main Menu
 *************************************************/
@@ -56,13 +81,18 @@ body:not(.home).pages.user_role_root_teacher
 }
 
 /***************************
-** Courses for role 'user'
+** User Type Student
 ***************************/
-/*.pages.user_role_user {	
-	#right-side-wrapper-disabled { display: none; }	
-}*/
+.user_type_student {
+	
+	.section_root #right-side-wrapper-disabled,
+	.section_courses #right-side-wrapper-disabled { 
+		display: none; 
+	}
+	
+}
 
-.user_type_student.section_root #right-side-wrapper-disabled { display: none; }
+
 
 .bullet-fun
 {

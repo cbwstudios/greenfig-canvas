@@ -51,6 +51,8 @@ $(document).ready(function()
 				$body.addClass('user_role_'+user_role)
 			})
 			
+			$body.addClass('user_type_'+currentRoles[currentRoles.length-1])
+			
 			const match = location.pathname.split('/')
 			
 			if(!match || match.length === 0)

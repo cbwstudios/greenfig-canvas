@@ -21,7 +21,7 @@ $(document).ready(function()
 	
 	function hasRole(role)
 	{
-		return currentRoles.find(role) !== undefined
+		return currentRoles.find(function(r) { r === role }) !== undefined
 	}
 	
 	function addCalendarLinkItem(course_id)

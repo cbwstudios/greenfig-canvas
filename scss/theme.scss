@@ -29,9 +29,6 @@
 }
 */
 
-
-
-
 /*************************************************
 ** Main Menu
 *************************************************/
@@ -39,7 +36,6 @@
 .ic-app-header__menu-list {
 	li:last-of-type { display: none; }
 }
-
 
 /*****************************************************
 ** Courses for role 'admin/root-admin/teacher'
@@ -55,11 +51,16 @@ body:not(.home).pages.user_role_root_teacher
 ** Courses for role 'user'
 ***************************/
 .pages.user_role_user {	
-	#right-side-wrapper-disabled { display: none; }	
+	#right-side-wrapper-disabled { 
+		display: none; 
+	}	
 }
 
-.user_role_user#right-side-wrapper-disabled { display: none; }
 
+
+.user_role_user#right-side-wrapper-disabled { 
+	display: none; 
+}
 
 .bullet-fun
 {

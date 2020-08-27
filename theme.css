@@ -36,7 +36,7 @@ body:before {
 body.loaded:before {
   display: none;
   transition: opacity 1s ease-out;
-  opacity: 0; }
+  opacity: .1; }
 
 /*************************************************
 ** Main Menu

@@ -9,7 +9,7 @@
 
 */
 /* Import SCSS Partials */
-/*
+/*  
 ** THIS BREAK THE CALENDER
 *
 @media only screen and (min-width: 992px)
@@ -36,18 +36,18 @@
 /*****************************************************
 ** Courses for role 'admin/root-admin/teacher'
 *******************************************************/
-body:not(.home).pages.user_type_root_admin #right-side-wrapper-disabled,
-body:not(.home).pages.user_type_admin
-body:not(.home).pages.user_type_root_teacher #right-side-wrapper-disabled {
+body:not(.home).pages.user_role_root_admin #right-side-wrapper-disabled,
+body:not(.home).pages.user_role_admin
+body:not(.home).pages.user_role_root_teacher #right-side-wrapper-disabled {
   display: none; }
 
 /***************************
 ** Courses for role 'user'
 ***************************/
-/*.pages.user_type_user {
-	#right-side-wrapper-disabled { display: none; }
+/*.pages.user_role_user {	
+	#right-side-wrapper-disabled { display: none; }	
 }*/
-.user_type_student #right-side-wrapper-disabled {
+.user_type_student.section_root #right-side-wrapper-disabled {
   display: none; }
 
 .bullet-fun {

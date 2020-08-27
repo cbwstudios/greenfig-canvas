@@ -34,7 +34,7 @@ body {
     width: 100%;
     height: 100%;
     background: black; }
-  body .loaded:before {
+  body.loaded:before {
     display: none;
     transition: opacity 1s ease-out;
     opacity: 0; }

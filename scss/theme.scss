@@ -33,11 +33,15 @@
 ** Main Menu
 *************************************************/
 
+.ic-app-header__main-navigation {
+	
+	
+	padding-top: 10px;
+}
+
 .ic-app-header__menu-list {
 	li:last-of-type { display: none; }
 }
-
-
 
 .ic-app-header__logomark-container {
 	display: none;

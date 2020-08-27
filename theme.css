@@ -26,7 +26,7 @@ body:before {
   display: flex;
   align-items: center;
   justify-content: center;
-  postion: absolute;
+  postition: absolute;
   top: 0;
   left: 0;
   width: 100%;

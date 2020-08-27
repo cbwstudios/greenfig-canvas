@@ -66,12 +66,22 @@ $(document).ready(function()
 			}
 			
 			let section = match[1],
-				course_id = match[2]
+				course_id = parseInt(match[2]),
+				subsection = 'none'
 			
 			if(section === '')
 				section = 'root'
+			if(section === 'courses')
+			{
+				if(course_id)
+					section = 'course'
+				
+				if(match[3])
+					subsection = match.slice(3).join('_')
+			}
 			
 			$body.addClass('section_'+section)
+			$body.addClass('subsection_'+subsection)
 			
 			// Hide nav options always?
 			$(`#global_nav_conversations_link`).hide()

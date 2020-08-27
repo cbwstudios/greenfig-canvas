@@ -27,8 +27,6 @@ $(document).ready(function()
 	
 	function addCalendarLinkItem(course_id)
 	{
-		console.warn('addCalendarLinkItem', course_id)
-		
 		const url = '/calendar?include_contexts=course_'+course_id
 		
 		if($sectionTabs.children().length < 1)

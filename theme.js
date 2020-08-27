@@ -55,18 +55,18 @@ $(document).ready(function()
 			
 			if(currentRoles != null && currentRoles.length > 0)
 			{
-				var role = currentRoles.USER
-				if(currentRoles.indexOf(currentRoles.TEACHER) !== -1 && currentRoles.length > 1)
+				var role = userRoles.USER
+				if(currentRoles.indexOf(userRoles.TEACHER) !== -1 && currentRoles.length > 1)
 				{
 					role = currentRoles.TEACHER
-					if(currentRoles.indexOf(currentRoles.ADMIN) !== -1 && currentRoles.length > 1)
+					if(currentRoles.indexOf(userRoles.ADMIN) !== -1 && currentRoles.length > 1)
 					{
-						role = currentRoles.ADMIN
+						role = userRoles.ADMIN
 					}
 				}
-				if(currentRoles.indexOf(currentRoles.ROOT_ADMIN) !== -1)
+				if(currentRoles.indexOf(userRoles.ROOT_ADMIN) !== -1)
 				{
-					role = currentRoles.ROOT_ADMIN
+					role = userRoles.ROOT_ADMIN
 				}
 				return role
 			}

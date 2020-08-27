@@ -71,7 +71,7 @@ $(document).ready(function()
 			
 			if(section === '')
 				section = 'root'
-			if(section === 'courses')
+			else if(section === 'courses')
 			{
 				if(course_id)
 					section = 'course'

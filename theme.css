@@ -41,6 +41,9 @@ body:not(.home).pages.user_role_root_teacher #right-side-wrapper-disabled {
 .pages.user_role_user #right-side-wrapper-disabled {
   display: none; }
 
+#right-side-wrapper-disabled {
+  display: none; }
+
 .bullet-fun {
   list-style-image: url("https://lms.ambi.school/users/106/files/4038/preview?verifier=jk4Ve34tP53iff6OgK8kPXmHpkySSnKvnBzAAxOp"); }
 

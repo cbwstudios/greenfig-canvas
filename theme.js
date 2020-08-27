@@ -9,150 +9,109 @@ $(document).ready(function()
 	const hasLogin = currentLocation.match(/login/g) != null
 	const isCourse = currentLocation.match(/courses/g) != null
 	const isProfile = currentLocation.match(/profile/g) != null
-	
-	function loginPageTheme()
-	{
-		document.title = "ambi: the first Learning Social Network"
-		// // Start Login Video
-		// $('body.ic-Login-Body .ic-app').prepend('<video autoplay muted loop id="bgvid"><source
-		// src="https://www.dropbox.com/s/egf3eyu4ecx08li/GreenFig.mp4?dl=1" type="video/mp4"></video><div
-		// class="video-dottedoverlay"></div>'); var beepOne = $("#beep-one")[0]; $("#nav-one a").mouseenter(function
-		// () { beepOne.play(); }); End Login Video
+	const $body = $('body')
+	const $sectionTabs = $('#section-tabs')
+	const userRoles = {
+		USER: 'user', // student
+		TEACHER: 'teacher',
+		ADMIN: 'admin',
+		ROOT_ADMIN: 'root_admin'
 	}
 	
-	function studentView()
+	// function loginPageTheme()
+	// {
+	// 	document.title = "ambi: the first Learning Social Network"
+	// 	// // Start Login Video
+	// 	// $('body.ic-Login-Body .ic-app').prepend('<video autoplay muted loop id="bgvid"><source
+	// 	// src="https://www.dropbox.com/s/egf3eyu4ecx08li/GreenFig.mp4?dl=1" type="video/mp4"></video><div
+	// 	// class="video-dottedoverlay"></div>'); var beepOne = $("#beep-one")[0]; $("#nav-one a").mouseenter(function
+	// 	// () { beepOne.play(); }); End Login Video
+	// }
+	
+	function addCalendarLinkItem(course_id)
 	{
+		const url = '/calendar?include_contexts=course_'+course_id
+		
+		if($sectionTabs.children().length < 1)
+		{
+			console.warn('No other links in menu')
+			return
+		}
+		
+		$sectionTabs.append(
+			'<li class="section">' +
+				'<a href="' + url + '" aria-label="Course Calendar" tabindex="0" title="Course Calendar">Calendar<i role="presentation"></i></a>' +
+			'</li>')
+	}
+	
+	function main()
+	{
+		console.log('ENV', ENV)
+		
+		// returns any one value of userType
+		function getCurrentUserRole()
+		{
+			let currentRoles = ENV.current_user_roles
+			
+			if(currentRoles != null && currentRoles.length > 0)
+			{
+				var role = currentRoles.USER
+				if(currentRoles.indexOf(currentRoles.TEACHER) !== -1 && currentRoles.length > 1)
+				{
+					role = currentRoles.TEACHER
+					if(currentRoles.indexOf(currentRoles.ADMIN) !== -1 && currentRoles.length > 1)
+					{
+						role = currentRoles.ADMIN
+					}
+				}
+				if(currentRoles.indexOf(currentRoles.ROOT_ADMIN) !== -1)
+				{
+					role = currentRoles.ROOT_ADMIN
+				}
+				return role
+			}
+			return 'default'
+		}
+		
 		try
 		{
-			const match = location.pathname.match(/\/courses\/(\d+)(\/.*)?/)
-			let url = '/calendar?include_contexts=course_'
+			const user_role = getCurrentUserRole()
+			$body.addClass('user_role_'+user_role)
 			
-			if(!match || !match[1])
+			const match = location.pathname.split('/')
+			
+			if(!match || match.length === 0)
 			{
-				console.warn('URL not recognized')
+				console.error('URL not recognized')
+				$body.addClass('error')
 				return
 			}
 			
-			url = url + match[1]
+			let section = match[1],
+				course_id = match[2]
 			
-			const $tabs = $('#section-tabs')
+			if(section === '')
+				section = 'root'
 			
-			if($tabs.children().length < 1)
-			{
-				console.warn('No other links in menu')
-				return
+			$body.addClass('section_'+section)
+			
+			// Hide nav options always?
+			$(`#global_nav_conversations_link`).hide()
+			
+			var handler = {
+				[userRoles.USER]: function() { addCalendarLinkItem(course_id) },
+				'default': function() {}
 			}
 			
-			$tabs.append(
-				'<li class="section">' +
-					'<a href="' + url + '" aria-label="Course Calendar" tabindex="0" title="Course Calendar">Calendar<i role="presentation"></i></a>' +
-				'</li>')
+			handler[user_role](section, course_id, user_role)
 		}
 		catch(e)
 		{
 			console.error(e.message, e.stack)
 		}
-	}
-	
-	/**
-	 * Add user role classname to body tag
-	 */
-	function setUserRoleClass(name)
-	{
-		$('body').addClass('user_role_'+name)
-	}
-	
-	function hideNavOptions()
-	{
-		// hide sidebar nav links
-		$(`.ic-app-header__menu-list li > #global_nav_conversations_link`).hide()
-	}
-	
-	function userSpecificTheming()
-	{
-		console.log('ENV', ENV)
-		
-		var userType = {
-			USER: 'user', // student
-			TEACHER: 'teacher',
-			ADMIN: 'admin',
-			ROOT_ADMIN: 'root_admin'
-		}
-		
-		var userRoles = ENV.current_user_roles
-		
-		function redirectToAMBI()
+		finally
 		{
-			// Note : Even if the user is created as a teacher, he will be assigned with the user_role of userType.User
-			// (student) untill he accepts his invitation to join a class as teacher. Only after accepting he will also
-			// be given the role teacher. So better approach here might be to redirect user to ambi app inside the
-			// canvas instead of redirecting to ambi.school. As of now redirecting to ambi.school if user is not on
-			// oauth flow or login screen of canvas
-			
-			// if (!hasLogin && !isLogout && !isCourse && !isProfile) {
-			//  window.location.href = `${currentAmbiURL}`;
-			//}
-			
-			// in case of qizzes preview page we are making some sections hidden by default
-			//if (currentLocation.match(/quizzes/g) != null || currentLocation.match(/take/g) != null) {
-			//  $(`#wrapper > .ic-app-nav-toggle-and-crumbs,
-			//   #header, #left-side.ic-app-course-menu`).hide();
-			//}
-		}
-		
-		// returns any one value of userType
-		function getCurrentUserType()
-		{
-			if(userRoles != null && userRoles.length > 0)
-			{
-				var user = userType.USER
-				if(userRoles.indexOf(userType.TEACHER) !== -1 && userRoles.length > 1)
-				{
-					user = userType.TEACHER
-					if(userRoles.indexOf(userType.ADMIN) !== -1 && userRoles.length > 1)
-					{
-						user = userType.ADMIN
-					}
-				}
-				if(userRoles.indexOf(userType.ROOT_ADMIN) !== -1)
-				{
-					user = userType.ROOT_ADMIN
-				}
-				return user
-			}
-			return 'default'
-		}
-		
-		var userSpecificTheme = {
-			[userType.USER]: function()
-			{
-				studentView()
-				// return redirectToAMBI()
-			},
-			[userType.TEACHER]: function() { return hideNavOptions() },
-			[userType.ADMIN]: function() {},
-			[userType.ROOT_ADMIN]: function() {},
-			'default': function() {}
-		}
-		
-		console.log(getCurrentUserType())
-		setUserRoleClass(getCurrentUserType())
-		
-		return userSpecificTheme[getCurrentUserType()]()
-	}
-	
-	function main()
-	{
-		hideNavOptions()
-		const isLoginPage = window.location.href === "https://lms.ambi.school/login/canvas"
-		
-		if(isLoginPage)
-		{
-			return loginPageTheme()
-		}
-		else
-		{
-			return userSpecificTheming()
+			$body.addClass('loaded')
 		}
 	}
 	

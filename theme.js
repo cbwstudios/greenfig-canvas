@@ -17,16 +17,12 @@ $(document).ready(function()
 		ADMIN: 'admin',
 		ROOT_ADMIN: 'root_admin'
 	}
+	const currentRoles = ENV.current_user_roles
 	
-	// function loginPageTheme()
-	// {
-	// 	document.title = "ambi: the first Learning Social Network"
-	// 	// // Start Login Video
-	// 	// $('body.ic-Login-Body .ic-app').prepend('<video autoplay muted loop id="bgvid"><source
-	// 	// src="https://www.dropbox.com/s/egf3eyu4ecx08li/GreenFig.mp4?dl=1" type="video/mp4"></video><div
-	// 	// class="video-dottedoverlay"></div>'); var beepOne = $("#beep-one")[0]; $("#nav-one a").mouseenter(function
-	// 	// () { beepOne.play(); }); End Login Video
-	// }
+	function hasRole(role)
+	{
+		return currentRoles.find(role) !== undefined
+	}
 	
 	function addCalendarLinkItem(course_id)
 	{
@@ -48,35 +44,12 @@ $(document).ready(function()
 	{
 		console.log('ENV', ENV)
 		
-		// returns any one value of userType
-		function getCurrentUserRole()
-		{
-			let currentRoles = ENV.current_user_roles
-			
-			if(currentRoles != null && currentRoles.length > 0)
-			{
-				var role = userRoles.USER
-				if(currentRoles.indexOf(userRoles.TEACHER) !== -1 && currentRoles.length > 1)
-				{
-					role = currentRoles.TEACHER
-					if(currentRoles.indexOf(userRoles.ADMIN) !== -1 && currentRoles.length > 1)
-					{
-						role = userRoles.ADMIN
-					}
-				}
-				if(currentRoles.indexOf(userRoles.ROOT_ADMIN) !== -1)
-				{
-					role = userRoles.ROOT_ADMIN
-				}
-				return role
-			}
-			return 'default'
-		}
-		
 		try
 		{
-			const user_role = getCurrentUserRole()
-			$body.addClass('user_role_'+user_role)
+			currentRoles.forEach(function(user_role)
+			{
+				$body.addClass('user_role_'+user_role)
+			})
 			
 			const match = location.pathname.split('/')
 			
@@ -98,12 +71,8 @@ $(document).ready(function()
 			// Hide nav options always?
 			$(`#global_nav_conversations_link`).hide()
 			
-			var handler = {
-				[userRoles.USER]: function() { addCalendarLinkItem(course_id) },
-				'default': function() {}
-			}
-			
-			handler[user_role](section, course_id, user_role)
+			if(hasRole(userRoles.STUDENT))
+				addCalendarLinkItem(course_id)
 		}
 		catch(e)
 		{

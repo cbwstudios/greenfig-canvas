@@ -21,6 +21,7 @@ $(document).ready(function()
 	
 	function hasRole(role)
 	{
+		console.warn('hasRole', role)
 		return currentRoles.find(function(r)
 		{
 			console.warn(role, r, r === role)

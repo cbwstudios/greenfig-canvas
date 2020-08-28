@@ -56,13 +56,16 @@ body {
 		z-index: 60000;
 	}
 	
-	&.loaded:before { 
+	&.loaded:before,
+	&.loaded:after { 
 		display: none;
 		transition: opacity 1s ease-out;
     	opacity: .1;
 	}
 	
 }
+
+
 
 #right-side-wrapper-disabled { * { white-space: normal; } }
 

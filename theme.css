@@ -42,7 +42,7 @@ body:after {
   left: 50%;
   top: 50%;
   z-index: 60000; }
-body.loaded:before {
+body.loaded:before, body.loaded:after {
   display: none;
   transition: opacity 1s ease-out;
   opacity: .1; }

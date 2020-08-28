@@ -127,9 +127,12 @@ body:not(.home).pages.user_role_root_teacher
 	* { outline: none; }
 	
 	color: black!important;
-	* { color: black!important; }	
+	* { color: black!important; }
+	
+	&::-moz-focus-inner { border: 0; }
 	
 }
+
 
 .bullet-fun
 {

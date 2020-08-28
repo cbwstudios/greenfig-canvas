@@ -104,12 +104,12 @@ body:not(.home).pages.user_role_root_teacher
 .user_type_student {
 	
 	.section_root #right-side-wrapper-disabled,
-	.section_courses #right-side-wrapper-disabled { 
+	.section_courses #right-side-wrapper-disabled,
+	.section_files #right-side-wrapper-disabled{ 
 		display: none; 
 	}
 	
 }
-
 
 
 .bullet-fun

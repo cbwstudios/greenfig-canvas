@@ -368,6 +368,8 @@ video#bgvid
 
 .ic-Login-Body {
 	
+	position: relative;
+	
 	&:before {
 		display: block;
 		position: absolute;
@@ -382,8 +384,7 @@ video#bgvid
 	.ic-Layout-contentMain,
 	.ic-Login__container { 
 		margin-top: 0; 
-	}	
-	
+	}		
 }
 
 .ic-Login

@@ -108,11 +108,15 @@ body:not(.home).pages.user_role_root_teacher
 	&.section_courses #right-side-wrapper-disabled,
 	&.section_files #right-side-wrapper-disabled,
 	&.section_course #right-side-wrapper-disabled,
+	&.section_profile #right-side-wrapper-disabled,
+	&.section_files #right-side-wrapper-disabled,
+	&.section_dashboard #right-side-wrapper-disabled 
 	.tray-with-space-for-global-nav a[href$='/communication'],
 	#section-tabs a[href$='/communication'] { 
 		display: none; 
 	}	
 }
+
 
 .bullet-fun
 {

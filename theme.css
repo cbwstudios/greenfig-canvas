@@ -41,7 +41,9 @@ body:after {
   position: absolute;
   left: 50%;
   top: 50%;
-  z-index: 60000; }
+  z-index: 60000;
+  transform: translateY(-50%);
+  transform: translateX(-50%); }
 body.loaded:before, body.loaded:after {
   display: none;
   transition: opacity 1s ease-out;

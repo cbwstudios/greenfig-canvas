@@ -276,6 +276,9 @@ video#bgvid {
     background-size: 150% !important;
     width: 100%;
     height: 100%; }
+    @media (max-width: 767px) {
+      .ic-Login-Body .ic-app:after {
+        background-size: 180% !important; } }
   .ic-Login-Body .ic-app-main-content {
     display: block !important; }
   .ic-Login-Body .ic-Layout-contentMain,

@@ -377,9 +377,12 @@ video#bgvid
 		left: 0;
 		bottom: 100px;
 		background: url(https://priceless-wescoff-dce896.netlify.app/login_bkg.svg) no-repeat !important;
-		background-position: Left bottom !important;
-		background-size: 150% !important;
-		@include breakpoint(phone) { background-size: 180% !important; }
+		background-position: 20px -100px;
+		background-size: contain;
+		@include breakpoint(phone) { 
+			background-position: bottom center;
+			background-size: contain;
+		}
 		width: 100%;
 		height: 100%;
 	}	
@@ -399,6 +402,7 @@ video#bgvid
 		}
 	}
 }
+
 
 .ic-Login-footer .ic-Login-footer__logo-link
 {

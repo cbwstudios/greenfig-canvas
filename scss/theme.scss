@@ -118,6 +118,19 @@ body:not(.home).pages.user_role_root_teacher
 	}	
 }
 
+/***************************
+** Course Menu
+***************************/
+#courseMenuToggle {
+	
+	outline: none;
+	* { outline: none; }
+	
+	color: black!important;
+	* { color: black!important; }	
+	
+}
+
 .bullet-fun
 {
     list-style-image: url('https://lms.ambi.school/users/106/files/4038/preview?verifier=jk4Ve34tP53iff6OgK8kPXmHpkySSnKvnBzAAxOp');
@@ -129,6 +142,10 @@ body:not(.home).pages.user_role_root_teacher
 strong
 {
 	font-weight: 600;
+}
+
+.ic-DashboardCard__link {
+	text-decoration: none!important;
 }
 
 .ic-Login__link

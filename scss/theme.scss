@@ -368,7 +368,9 @@ video#bgvid
 
 .ic-Login-Body {	
 
-	background: image("https://priceless-wescoff-dce896.netlify.app/login_background.svg") left bottom cover no-repeat!important;
+	background: image("https://priceless-wescoff-dce896.netlify.app/login_background.svg")!important;
+	background-position: bottom left!important;
+	background-size: contain!important;
 	
 	.ic-app-main-content { display: block!important; }
 	.ic-Layout-contentMain,
@@ -379,7 +381,6 @@ video#bgvid
 
 .ic-Login
 {
-
 	justify-content: flex-end;
 	padding-right: 50px;
 

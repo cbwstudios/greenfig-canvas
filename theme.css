@@ -261,6 +261,9 @@ video#bgvid {
 .ic-Login__content {
   opacity: .9; }
 
+.ic-Login-Body .ic-app-main-content {
+  display: block !important; }
+
 .ic-Login {
   justify-content: flex-end;
   padding-right: 50px; }

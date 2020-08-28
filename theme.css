@@ -22,7 +22,14 @@
 }
 */
 body {
-  position: relative; }
+  position: relative;
+  	/*
+  	&.loaded:before,
+  	&.loaded:after { 
+  		display: none;
+  		transition: opacity 1s ease-out;
+      	opacity: .1;
+  	}*/ }
   body:before {
     content: "";
     display: flex;
@@ -46,10 +53,6 @@ body {
     z-index: 60000;
     transform: translateY(-50%);
     transform: translateX(-50%); }
-  body.loaded:before, body.loaded:after {
-    display: none;
-    transition: opacity 1s ease-out;
-    opacity: .1; }
 
 #right-side-wrapper-disabled * {
   white-space: normal; }

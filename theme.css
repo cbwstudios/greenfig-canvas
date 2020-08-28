@@ -79,10 +79,10 @@ body:not(.home).pages.user_role_root_teacher #right-side-wrapper-disabled {
 .user_type_student.section_root #right-side-wrapper-disabled, .user_type_student.section_courses #right-side-wrapper-disabled, .user_type_student.section_files #right-side-wrapper-disabled, .user_type_student.section_course #right-side-wrapper-disabled, .user_type_student.section_files #right-side-wrapper-disabled, .user_type_student.section_dashboard #right-side-wrapper-disabled,
 .user_type_student .tray-with-space-for-global-nav a[href$='/communication'],
 .user_type_student #section-tabs a[href$='/communication'],
-.user_type_student #dashboard div.ic-notification:last-of-type, .user_type_user.section_root #right-side-wrapper-disabled, .user_type_user.section_courses #right-side-wrapper-disabled, .user_type_user.section_files #right-side-wrapper-disabled, .user_type_user.section_course #right-side-wrapper-disabled, .user_type_user.section_files #right-side-wrapper-disabled, .user_type_user.section_dashboard #right-side-wrapper-disabled,
+.user_type_student #dashboard > div:nth-child(3), .user_type_user.section_root #right-side-wrapper-disabled, .user_type_user.section_courses #right-side-wrapper-disabled, .user_type_user.section_files #right-side-wrapper-disabled, .user_type_user.section_course #right-side-wrapper-disabled, .user_type_user.section_files #right-side-wrapper-disabled, .user_type_user.section_dashboard #right-side-wrapper-disabled,
 .user_type_user .tray-with-space-for-global-nav a[href$='/communication'],
 .user_type_user #section-tabs a[href$='/communication'],
-.user_type_user #dashboard div.ic-notification:last-of-type {
+.user_type_user #dashboard > div:nth-child(3) {
   display: none; }
 
 .bullet-fun {

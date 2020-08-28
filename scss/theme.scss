@@ -112,11 +112,12 @@ body:not(.home).pages.user_role_root_teacher
 	&.section_dashboard #right-side-wrapper-disabled,
 	.tray-with-space-for-global-nav a[href$='/communication'],
 	#section-tabs a[href$='/communication'],
-	#dashboard div.ic-notification:last-of-type	
+	#dashboard > div:nth-child(3)	
 	{ 
 		display: none; 
 	}	
 }
+
 
 .bullet-fun
 {

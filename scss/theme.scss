@@ -368,6 +368,8 @@ video#bgvid
 
 .ic-Login-Body {
 	
+	min-width: auto!important;
+	
 	.ic-app { position: relative; }
 	.ic-app:after {
 		content: "";
@@ -397,7 +399,6 @@ video#bgvid
 		}
 	}
 }
-
 
 .ic-Login-footer .ic-Login-footer__logo-link
 {

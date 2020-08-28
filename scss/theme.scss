@@ -391,10 +391,11 @@ video#bgvid
 	.ic-Login {
 		justify-content: flex-end;
 		padding-right: 100px;
-
+		@include breackpoint(tablet) {
+			justify-content: center;
+		}
 	}
 }
-
 
 .ic-Login-footer .ic-Login-footer__logo-link
 {

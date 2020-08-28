@@ -270,7 +270,7 @@ video#bgvid {
     display: block;
     position: absolute;
     left: 0;
-    bottom: 100px;
+    top: 0;
     background: url(https://priceless-wescoff-dce896.netlify.app/login_bkg.svg) no-repeat !important;
     background-position: 20px -100px;
     background-size: contain;

@@ -31,6 +31,8 @@
 
 body {	
 	
+	position: relative;
+	
 	&:before {
 		content: "";
 		display: flex;
@@ -68,6 +70,8 @@ body {
 }
 
 #right-side-wrapper-disabled { * { white-space: normal; } }
+
+
 
 
 /*************************************************

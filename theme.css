@@ -21,33 +21,35 @@
 	}
 }
 */
-body:before {
-  content: "";
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: black;
-  z-index: 50000; }
-body:after {
-  content: url(https://priceless-wescoff-dce896.netlify.app/Pulse.svg);
-  display: block;
-  max-width: 100%;
-  height: auto;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  z-index: 60000;
-  transform: translateY(-50%);
-  transform: translateX(-50%); }
-body.loaded:before, body.loaded:after {
-  display: none;
-  transition: opacity 1s ease-out;
-  opacity: .1; }
+body {
+  position: relative; }
+  body:before {
+    content: "";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: 50000; }
+  body:after {
+    content: url(https://priceless-wescoff-dce896.netlify.app/Pulse.svg);
+    display: block;
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 60000;
+    transform: translateY(-50%);
+    transform: translateX(-50%); }
+  body.loaded:before, body.loaded:after {
+    display: none;
+    transition: opacity 1s ease-out;
+    opacity: .1; }
 
 #right-side-wrapper-disabled * {
   white-space: normal; }

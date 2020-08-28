@@ -366,7 +366,19 @@ video#bgvid
 
 }
 
-.ic-Login-Body {	
+.ic-Login-Body {
+	
+	&:after {
+		display: block;
+		position: absolute;
+		left: 0;
+		bottom: -100px;
+		background: url(https://priceless-wescoff-dce896.netlify.app/login_background.svg) no-repeat!important;
+		background-position: center bottom!important;
+		background-size: cover!important;
+	}
+
+	
 	
 	.ic-app-main-content { display: block!important; }
 	.ic-Layout-contentMain,

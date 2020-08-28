@@ -368,8 +368,12 @@ video#bgvid
 
 .ic-Login-Body {
 	.ic-app-main-content { display: block!important; }
-	.ic-Layout-contentMain { margin-top: 0; }
+	.ic-Layout-contentMain,
+	.ic-Login__container { 
+		margin-top: 0; 
+	}
 }
+
 
 .ic-Login
 {

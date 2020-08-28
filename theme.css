@@ -38,6 +38,9 @@ body.loaded:before {
   transition: opacity 1s ease-out;
   opacity: .1; }
 
+#right-side-wrapper-disabled * {
+  white-space: normal; }
+
 /*************************************************
 ** Main Menu
 *************************************************/

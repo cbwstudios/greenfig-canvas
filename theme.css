@@ -280,8 +280,12 @@ video#bgvid {
 .ic-Login-Body .ic-Login__container {
   margin-top: 0; }
 .ic-Login-Body .ic-Login {
-  justify-content: center;
+  justify-content: flex-end;
   padding-right: 100px; }
+  @media (min-width: 768px) {
+    .ic-Login-Body .ic-Login {
+      justify-content: center;
+      padding-right: 0; } }
 
 .ic-Login-footer .ic-Login-footer__logo-link {
   display: none; }

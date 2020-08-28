@@ -388,14 +388,15 @@ video#bgvid
 		margin-top: 0; 
 	}
 	
-	.ic-Login {
-		
-		justify-content: center;
-		padding-right: 100px;		
+	.ic-Login {		
+		justify-content: flex-end;
+		padding-right: 100px;
+		@include breakpoint(tablet) {
+			justify-content: center;
+			padding-right: 0;
+		}
 	}
 }
-
-
 
 .ic-Login-footer .ic-Login-footer__logo-link
 {

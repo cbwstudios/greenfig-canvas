@@ -102,7 +102,7 @@ body:not(.home).pages.user_role_root_teacher
 /***************************
 ** User Type Student
 ***************************/
-.user_type_student {
+.user_type_student, .user_type_user {
 	
 	&.section_root #right-side-wrapper-disabled,
 	&.section_courses #right-side-wrapper-disabled,
@@ -117,6 +117,7 @@ body:not(.home).pages.user_role_root_teacher
 		display: none; 
 	}	
 }
+
 
 .bullet-fun
 {

@@ -45,6 +45,17 @@ body {
 		z-index: 50000;
 	}
 	
+	&:after {
+		content: url(https://priceless-wescoff-dce896.netlify.app/Pulse.svg);
+		display: block;
+		max-width: 100%;
+		height: auto;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		z-index: 60000;
+	}
+	
 	&.loaded:before { 
 		display: none;
 		transition: opacity 1s ease-out;
@@ -53,9 +64,7 @@ body {
 	
 }
 
-
 #right-side-wrapper-disabled { * { white-space: normal; } }
-
 
 
 /*************************************************

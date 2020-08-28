@@ -368,21 +368,18 @@ video#bgvid
 .ic-Login-Body {
 	
 	min-width: auto!important;
-	
-	.ic-app { position: relative; }
-	.ic-app:after {
-		content: "";
-		display: block;
-		position: absolute;
-		left: 0;
-		bottom: 100px;
-		background: url(https://priceless-wescoff-dce896.netlify.app/login_bkg.svg) no-repeat !important;
-		background-position: Left bottom !important;
-		background-size: 150% !important;
-		@include breakpoint(phone) { background-size: 180% !important; }
-		width: 100%;
-		height: 100%;
-	}	
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: 100px;
+	background: url(https://priceless-wescoff-dce896.netlify.app/login_bkg.svg) no-repeat !important;
+	background-position: Left bottom !important;
+	background-size: 150% !important;
+	@include breakpoint(phone) { background-size: 180% !important; }
+	width: 100%;
+	height: 100%;
+
 	
 	.ic-app-main-content { display: block!important; }
 	.ic-Layout-contentMain,
@@ -399,6 +396,7 @@ video#bgvid
 		}
 	}
 }
+
 
 .ic-Login-footer .ic-Login-footer__logo-link
 {

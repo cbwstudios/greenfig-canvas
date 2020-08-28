@@ -262,6 +262,7 @@ video#bgvid {
   opacity: .9; }
 
 .ic-Login-Body:before {
+  display: block;
   position: absolute;
   top: 0;
   left: 0;

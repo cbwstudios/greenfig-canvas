@@ -262,15 +262,7 @@ video#bgvid {
   opacity: .9; }
 
 .ic-Login-Body {
-  position: relative; }
-  .ic-Login-Body:before {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: image("https://priceless-wescoff-dce896.netlify.app/login_background.svg") left bottom cover no-repeat; }
+  background: image("https://priceless-wescoff-dce896.netlify.app/login_background.svg") left bottom cover no-repeat; }
   .ic-Login-Body .ic-app-main-content {
     display: block !important; }
   .ic-Login-Body .ic-Layout-contentMain,

@@ -1,335 +1,72 @@
-/* Original Imports.  Now moved to imports file.
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
-@font-face
-{
-	font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	src: url('https://s3.amazonaws.com/ambi-static/fonts/lineto-circular-medium.ttf') format('truetype');
-}
-
-*/
-/* Import SCSS Partials */
-/*  
-** THIS BREAK THE CALENDER
-*
-@media only screen and (min-width: 992px)
-{
-	body:not(.course-menu-expanded) .ic-app-main-content__secondary
-	{
-		width: auto;
-		padding-left: 24px;
-	}
-}
-*/
-body {
-  position: relative; }
-  body:before {
-    content: "";
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: white;
-    z-index: 50000; }
-  body:after {
-    content: url(https://priceless-wescoff-dce896.netlify.app/spinner.svg);
-    display: block;
-    max-width: 100%;
-    height: auto;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    z-index: 60000;
-    margin: -100px 0 0 -103px; }
-  body.loaded:before, body.loaded:after {
-    display: none;
-    transition: opacity 1s ease-out;
-    opacity: .1; }
-
-#right-side-wrapper-disabled * {
-  white-space: normal; }
-
-/*************************************************
-** Main Menu
-*************************************************/
-.ic-app-header__main-navigation {
-  padding-top: 10px; }
-
-.ic-app-header__menu-list li:last-of-type {
-  display: none; }
-
-.ic-app-header__logomark-container {
-  display: none; }
-
-/*****************************************************
-** Courses for role 'admin/root-admin/teacher'
-*******************************************************/
-body:not(.home).pages.user_role_root_admin #right-side-wrapper-disabled,
-body:not(.home).pages.user_role_admin
-body:not(.home).pages.user_role_root_teacher #right-side-wrapper-disabled {
-  display: none; }
-
-/***************************
-** User Type Student
-***************************/
-.user_type_student.section_root #right-side-wrapper-disabled, .user_type_student.section_courses #right-side-wrapper-disabled, .user_type_student.section_files #right-side-wrapper-disabled, .user_type_student.section_course #right-side-wrapper-disabled, .user_type_student.section_files #right-side-wrapper-disabled, .user_type_student.section_dashboard #right-side-wrapper-disabled,
-.user_type_student .tray-with-space-for-global-nav a[href$='/communication'],
-.user_type_student #section-tabs a[href$='/communication'],
-.user_type_student #dashboard > div:nth-child(3), .user_type_user.section_root #right-side-wrapper-disabled, .user_type_user.section_courses #right-side-wrapper-disabled, .user_type_user.section_files #right-side-wrapper-disabled, .user_type_user.section_course #right-side-wrapper-disabled, .user_type_user.section_files #right-side-wrapper-disabled, .user_type_user.section_dashboard #right-side-wrapper-disabled,
-.user_type_user .tray-with-space-for-global-nav a[href$='/communication'],
-.user_type_user #section-tabs a[href$='/communication'],
-.user_type_user #dashboard > div:nth-child(3) {
-  display: none; }
-
-.bullet-fun {
-  list-style-image: url("https://lms.ambi.school/users/106/files/4038/preview?verifier=jk4Ve34tP53iff6OgK8kPXmHpkySSnKvnBzAAxOp"); }
-
-.bullet-fun li {
-  margin-bottom: 10px; }
-
-strong {
-  font-weight: 600; }
-
-.ic-Login__link {
-  display: block !important; }
-
-.ic-flash-success {
-  display: none; }
-
-.ic-DashboardCard__header_hero {
-  box-sizing: border-box;
-  height: 146px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  opacity: 0.0; }
-
-#flash_message_holder {
-  display: none; }
-
-.ic-app-main-content__secondary {
-  width: auto;
-  /* padding-left: 24px; */ }
-
-.ic-flash-info {
-  display: none; }
-
-.ic-Layout-contentMain {
-  margin-top: 35px; }
-
-.lms-sandbox {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding-right: 29px;
-  padding-left: 0px; }
-
-body {
-  font-size: .9rem !important; }
-
-.menu-item__text {
-  font-size: 12px !important; }
-
-.pages.show .page-title {
-  font-size: 1.8em;
-  font-weight: 200;
-  margin: 15px 0;
-  color: #031A2B; }
-
-.heading-45 {
-  font-size: 32px;
-  line-height: 42px;
-  font-weight: 500; }
-
-.heading-46 {
-  font-size: 17px;
-  line-height: 28px;
-  font-weight: 600; }
-
-.paragraph-57 {
-  color: #141414;
-  font-size: 15px;
-  line-height: 24px; }
-
-.lms-button.purp {
-  margin-top: 25px;
-  margin-bottom: 25px;
-  border-radius: 5px;
-  background-color: #A133C9; }
-
-.lms-button {
-  padding-right: 34px !important;
-  padding-left: 34px !important;
-  font-family: Montserrat, sans-serif;
-  font-size: 15px;
-  font-weight: 500;
-  text-decoration: none !important; }
-
-a.lms-button:hover {
-  color: #FFF !important; }
-
-.w-button {
-  display: inline-block;
-  padding: 9px 15px;
-  background-color: #3898EC;
-  color: #FFF;
-  border: 0;
-  line-height: inherit;
-  text-decoration: none;
-  cursor: pointer;
-  border-radius: 0; }
-
-.w-button a:hover {
-  color: #FFFFFF; }
-
-li, p {
-  color: #031A2B;
-  font-weight: 400;
-  font-family: 'Poppins', sans-serif; }
-
-.dms-lms-learning-outcomes {
-  margin-top: 10px;
-  margin-bottom: 37px;
-  border-top: 1px solid #B4B4B4;
-  padding-top: 12px;
-  padding-bottom: 30px; }
-
-.dms-lms-overview-img {
-  margin-left: 54px; }
-
-.dms-lms-learning-outcomes {
-  border-bottom: 1px solid #B4B4B4; }
-
-* {
-  font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif !important; }
-
-/* main css */
-h1, h2, h3, h4, h5, p {
-  font-family: 'Poppins', sans-serif; }
-
-/* login page css */
 /*
-  Note:
-  disabling banner using the command given in bitnami docs is not working.
-  Even any modifications to apache is not working. I'm not sure why.
-  So, I'm disabling it here.
+Error: Invalid CSS after ".": expected class name, was ".ic-app"
+        on line 371 of D:\Code\GreenFig\canvas-app\scss\theme.scss
+
+366: 
+367: }
+368: 
+369: .ic-Login-Body {
+370: 	
+371: 	..ic-app { position: relative; }
+372: 	.ic-app:after {
+373: 		display: block;
+374: 		position: absolute;
+375: 		left: 0;
+376: 		bottom: -100px;
+
+Backtrace:
+D:\Code\GreenFig\canvas-app\scss\theme.scss:371
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in `expected'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1238:in `expected'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1233:in `tok!'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1097:in `ident!'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/static_parser.rb:194:in `class_selector'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/static_parser.rb:156:in `simple_selector_sequence'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/static_parser.rb:108:in `selector'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/static_parser.rb:83:in `selector_comma_sequence'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1216:in `expr!'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/static_parser.rb:20:in `parse_selector'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:434:in `visit_rule'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `block (2 levels) in visit_rule'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `map'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `block in visit_rule'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:438:in `visit_rule'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `map'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:157:in `visit'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:10:in `visit'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:36:in `css_tree'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:20:in `render'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/engine.rb:290:in `render'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:396:in `run'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:63:in `process_result'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in `parse'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in `parse!'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/bin/sass:13:in `<top (required)>'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/bin/sass:23:in `load'
+E:/Adobe/Adobe Dreamweaver 2020/ruby/bin/sass:23:in `<main>'
 */
-#bitnami-banner {
-  display: none; }
-
-video#bgvid {
-  height: auto;
-  left: 50%;
-  min-height: 100%;
-  min-width: 100%;
-  position: fixed;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  width: auto;
-  z-index: -100; }
-
-.video-dottedoverlay {
-  background-image: url("https://www.dropbox.com/s/jkwxjhqnt5gu5zz/gridtile2.png?dl=1");
-  background-repeat: repeat;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 3; }
-
-video#bgvid {
-  transition: opacity 1s ease 0s; }
-
-/* oAuth Confirmation Screen */
-.ic-Login-confirmation__logo {
-  width: 140px;
-  height: 69px;
-  background: url("https://uploads-ssl.webflow.com/5b34459e3717ce1cbc5e47a0/5b344c2267f597818220ee11_greenfig-logo.png") no-repeat;
-  display: block;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding-left: 350px; }
-
-.ic-Login-confirmation__header {
-  background: #333; }
-
-/* End of oAuth stuff */
-.ic-Login__content {
-  opacity: .9; }
-
-.ic-Login-Body .ic-app:after {
-  display: block;
-  position: absolute;
-  left: 0;
-  bottom: -100px;
-  background: url(https://priceless-wescoff-dce896.netlify.app/login_background.svg) no-repeat !important;
-  background-position: center bottom !important;
-  background-size: cover !important; }
-.ic-Login-Body .ic-app-main-content {
-  display: block !important; }
-.ic-Login-Body .ic-Layout-contentMain,
-.ic-Login-Body .ic-Login__container {
-  margin-top: 0; }
-
-.ic-Login {
-  justify-content: flex-end;
-  padding-right: 50px; }
-
-.ic-Login-footer .ic-Login-footer__logo-link {
-  display: none; }
-
-.ic-Login-footer .ic-Login-footer__links {
-  display: none; }
-
-.ic-Login__link {
-  display: none; }
-
-.ic-Login-header__links .ic-Login__link:first-of-type {
-  margin-top: 0;
-  display: none; }
-
-.ic-Login-header {
-  display: block;
-  padding: 10px 10px 10px 10px; }
-
-.ic-Login-header__logo {
-  flex: 0 0 300px;
-  min-width: 1px; }
-
-.ic-brand-Login-body-bgd-color {
-  background-color: none; }
-
-.ic-app-footer {
-  display: none; }
-
-/* end of login page css */
-/* quizes question css */
-.question {
-  background-color: #FFF;
-  position: relative;
-  min-height: 50px;
-  margin: 0.7em auto 30px;
-  padding: 24px 32px;
-  border: 1px solid #F1F1F1;
-  border-radius: 14px;
-  box-shadow: 0 10px 20px 0 rgba(50, 62, 99, 0.04);
-  margin-bottom: 24px; }
-
-.question .header {
-  background-color: transparent;
-  border: none; }
-
-.question.multiple_choice_question .answer,
-.question.multiple_answers_question .answer,
-.question.matching_question .answer,
-.question.true_false_question .answer {
-  border: none; }
-
-/* end of quizzes css */
-/* HTML EDITOR ICON FIX css START */
-.mce-ico {
-  font-family: tinymce, Arial !important; }
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \".\": expected class name, was \".ic-app\"\A         on line 371 of D:\Code\GreenFig\canvas-app\scss\theme.scss\A \A 366: \A 367: }\A 368: \A 369: .ic-Login-Body {\A 370: 	\A 371: 	..ic-app { position: relative; }\A 372: 	.ic-app:after {\A 373: 		display: block;\A 374: 		position: absolute;\A 375: 		left: 0;\A 376: 		bottom: -100px;"; }

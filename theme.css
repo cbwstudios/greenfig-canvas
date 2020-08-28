@@ -278,7 +278,7 @@ video#bgvid {
     height: 100%; }
     @media (max-width: 767px) {
       .ic-Login-Body .ic-app:after {
-        background-position: bottom center;
+        background-position: bottom !important;
         background-size: contain; } }
   .ic-Login-Body .ic-app-main-content {
     display: block !important; }

@@ -380,7 +380,7 @@ video#bgvid
 		background-position: 20px -100px;
 		background-size: contain;
 		@include breakpoint(phone) { 
-			background-position: bottom center;
+			background-position: bottom!important;
 			background-size: contain;
 		}
 		width: 100%;
@@ -402,7 +402,6 @@ video#bgvid
 		}
 	}
 }
-
 
 .ic-Login-footer .ic-Login-footer__logo-link
 {

@@ -370,7 +370,7 @@ video#bgvid
 	min-width: auto!important;
 	
 	.ic-app { position: relative; }
-	.ic-app {
+	.ic-app:after {
 		content: "";
 		display: block;
 		position: absolute;
@@ -399,7 +399,6 @@ video#bgvid
 		}
 	}
 }
-
 
 .ic-Login-footer .ic-Login-footer__logo-link
 {

@@ -265,7 +265,7 @@ video#bgvid {
   min-width: auto !important; }
   .ic-Login-Body .ic-app {
     position: relative; }
-  .ic-Login-Body .ic-app {
+  .ic-Login-Body .ic-app:after {
     content: "";
     display: block;
     position: absolute;
@@ -277,7 +277,7 @@ video#bgvid {
     width: 100%;
     height: 100%; }
     @media (max-width: 767px) {
-      .ic-Login-Body .ic-app {
+      .ic-Login-Body .ic-app:after {
         background-size: 180% !important; } }
   .ic-Login-Body .ic-app-main-content {
     display: block !important; }

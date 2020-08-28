@@ -386,15 +386,15 @@ video#bgvid
 	.ic-Layout-contentMain,
 	.ic-Login__container { 
 		margin-top: 0; 
-	}		
+	}
+	
+	.ic-Login {
+		justify-content: flex-end;
+		padding-right: 100px;
+
+	}
 }
 
-.ic-Login
-{
-	justify-content: flex-end;
-	padding-right: 50px;
-
-}
 
 .ic-Login-footer .ic-Login-footer__logo-link
 {

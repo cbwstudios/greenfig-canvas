@@ -261,15 +261,11 @@ video#bgvid {
 .ic-Login__content {
   opacity: .9; }
 
-.ic-Login-Body {
-  background: url(https://priceless-wescoff-dce896.netlify.app/login_background.svg) !important;
-  background-position: bottom left !important;
-  background-size: contain !important; }
-  .ic-Login-Body .ic-app-main-content {
-    display: block !important; }
-  .ic-Login-Body .ic-Layout-contentMain,
-  .ic-Login-Body .ic-Login__container {
-    margin-top: 0; }
+.ic-Login-Body .ic-app-main-content {
+  display: block !important; }
+.ic-Login-Body .ic-Layout-contentMain,
+.ic-Login-Body .ic-Login__container {
+  margin-top: 0; }
 
 .ic-Login {
   justify-content: flex-end;

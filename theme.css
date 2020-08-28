@@ -76,7 +76,8 @@ body:not(.home).pages.user_role_root_teacher #right-side-wrapper-disabled {
 /***************************
 ** User Type Student
 ***************************/
-.user_type_student.section_root #right-side-wrapper-disabled, .user_type_student.section_courses #right-side-wrapper-disabled, .user_type_student.section_files #right-side-wrapper-disabled, .user_type_student.section_course #right-side-wrapper-disabled {
+.user_type_student.section_root #right-side-wrapper-disabled, .user_type_student.section_courses #right-side-wrapper-disabled, .user_type_student.section_files #right-side-wrapper-disabled, .user_type_student.section_course #right-side-wrapper-disabled,
+.user_type_student .tray-with-space-for-global-nav a[href$='/communication'] {
   display: none; }
 
 .bullet-fun {

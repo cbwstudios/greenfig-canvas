@@ -370,7 +370,7 @@ video#bgvid
 	
 	.ic-app { position: relative; }
 	.ic-app:after {
-		content: ""j:
+		content: " ":
 		display: block;
 		position: absolute;
 		left: 0;
@@ -386,7 +386,6 @@ video#bgvid
 		margin-top: 0; 
 	}		
 }
-
 
 .ic-Login
 {

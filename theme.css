@@ -1,5 +1,5 @@
 /*
-Error: Invalid CSS after "		content: ""j": expected ";", was ":"
+Error: Invalid CSS after "		content: " "": expected ";", was ":"
         on line 373 of D:\Code\GreenFig\canvas-app\scss\theme.scss
 
 368: 
@@ -7,7 +7,7 @@ Error: Invalid CSS after "		content: ""j": expected ";", was ":"
 370: 	
 371: 	.ic-app { position: relative; }
 372: 	.ic-app:after {
-373: 		content: ""j:
+373: 		content: " ":
 374: 		display: block;
 375: 		position: absolute;
 376: 		left: 0;
@@ -48,4 +48,4 @@ E:/Adobe/Adobe Dreamweaver 2020/ruby/bin/sass:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"		content: \"\"j\": expected \";\", was \":\"\A         on line 373 of D:\Code\GreenFig\canvas-app\scss\theme.scss\A \A 368: \A 369: .ic-Login-Body {\A 370: 	\A 371: 	.ic-app { position: relative; }\A 372: 	.ic-app:after {\A 373: 		content: \"\"j:\A 374: 		display: block;\A 375: 		position: absolute;\A 376: 		left: 0;\A 377: 		bottom: -100px;\A 378: 		background: url(https://priceless-wescoff-dce896.netlify.app/background.svg) no-repeat!important;"; }
+  content: "Error: Invalid CSS after \"		content: \" \"\": expected \";\", was \":\"\A         on line 373 of D:\Code\GreenFig\canvas-app\scss\theme.scss\A \A 368: \A 369: .ic-Login-Body {\A 370: 	\A 371: 	.ic-app { position: relative; }\A 372: 	.ic-app:after {\A 373: 		content: \" \":\A 374: 		display: block;\A 375: 		position: absolute;\A 376: 		left: 0;\A 377: 		bottom: -100px;\A 378: 		background: url(https://priceless-wescoff-dce896.netlify.app/background.svg) no-repeat!important;"; }

@@ -41,7 +41,7 @@ $(document).ready(function()
 			'</li>')
 	}
 	
-	function addHelpLinkItem(course_id)
+	function addHelpLinkItem(course_id, active)
 	{
 		const url = '/courses/'+course_id+'/pages/course-help'
 		
@@ -51,10 +51,20 @@ $(document).ready(function()
 			return
 		}
 		
+		let className = ''
+		
+		if(active)
+		{
+			$sectionTabs.find('a.active')
+				.removeClass('active')
+			
+			className = 'active'
+		}
+		
 		const title = 'Course Help'
 		$sectionTabs.append(
 			'<li class="section">' +
-				'<a href="' +url+ '" aria-label="' +title+ '" tabindex="0" title="' +title+ '">' +title+ '<i role="presentation"></i></a>' +
+				'<a href="' +url+ '" aria-label="' +title+ '" tabindex="0" title="' +title+ '" class="' +className+ '">' +title+ '<i role="presentation"></i></a>' +
 			'</li>')
 	}
 	
@@ -106,7 +116,7 @@ $(document).ready(function()
 				if(hasRole(userRoles.STUDENT))
 					addCalendarLinkItem(course_id)
 				
-				addHelpLinkItem(course_id)
+				addHelpLinkItem(course_id, subsection === 'subsection_pages_course-help')
 			}
 		}
 		catch(e)

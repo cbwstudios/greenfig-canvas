@@ -55,10 +55,8 @@ $(document).ready(function()
 		
 		if(active)
 		{
-			const $foo = $sectionTabs.find('a.active')
+			$sectionTabs.find('a.active')
 				.removeClass('active')
-			
-			console.warn($foo)
 			
 			className = 'active'
 		}

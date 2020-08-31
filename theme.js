@@ -118,8 +118,7 @@ $(document).ready(function()
 				if(hasRole(userRoles.STUDENT))
 					addCalendarLinkItem(course_id)
 				
-				console.warn('subsection', subsection)
-				addHelpLinkItem(course_id, subsection === 'subsection_pages_course-help')
+				addHelpLinkItem(course_id, subsection === 'pages_course-help')
 			}
 		}
 		catch(e)

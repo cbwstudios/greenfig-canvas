@@ -37,7 +37,24 @@ $(document).ready(function()
 		
 		$sectionTabs.append(
 			'<li class="section">' +
-				'<a href="' + url + '" aria-label="Course Calendar" tabindex="0" title="Course Calendar">Calendar<i role="presentation"></i></a>' +
+				'<a href="' +url+ '" aria-label="Course Calendar" tabindex="0" title="Course Calendar">Calendar<i role="presentation"></i></a>' +
+			'</li>')
+	}
+	
+	function addHelpLinkItem(course_id)
+	{
+		const url = '/courses/'+course_id+'/pages/course-help'
+		
+		if($sectionTabs.children().length < 1)
+		{
+			console.warn('No other links in menu')
+			return
+		}
+		
+		const title = 'Course Help'
+		$sectionTabs.append(
+			'<li class="section">' +
+				'<a href="' +url+ '" aria-label="' +title+ '" tabindex="0" title="' +title+ '">' +title+ '<i role="presentation"></i></a>' +
 			'</li>')
 	}
 	
@@ -84,8 +101,13 @@ $(document).ready(function()
 			// Hide nav options always?
 			$(`#global_nav_conversations_link`).hide()
 			
-			if(hasRole(userRoles.STUDENT))
-				addCalendarLinkItem(course_id)
+			if(course_id)
+			{
+				if(hasRole(userRoles.STUDENT))
+					addCalendarLinkItem(course_id)
+				
+				addHelpLinkItem(course_id)
+			}
 		}
 		catch(e)
 		{

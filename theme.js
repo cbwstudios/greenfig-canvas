@@ -43,7 +43,7 @@ $(document).ready(function()
 	
 	function addHelpLinkItem(course_id, active)
 	{
-		const url = '/courses/'+course_id+'/pages/course-help'
+		const url = '/courses/'+course_id+'/pages/support'
 		
 		if($sectionTabs.children().length < 1)
 		{

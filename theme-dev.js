@@ -88,7 +88,7 @@ $(document).ready(function()
 			className = 'active'
 		}
 		
-		const title = 'Support'
+		const title = 'Session Recordings'
 		$sectionTabs.append(
 			'<li class="section">' +
 				'<a href="' +url+ '" aria-label="' +title+ '" tabindex="0" title="' +title+ '" class="' +className+ '">' +title+ '<i role="presentation"></i></a>' +

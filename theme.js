@@ -143,7 +143,7 @@ $(document).ready(function()
 				if(hasRole(userRoles.STUDENT))
 					addCalendarLinkItem(course_id)
 				
-				addHelpLinkItem(course_id, subsection === 'pages_course-help')
+				addHelpLinkItem(course_id, subsection === 'pages_support')
 				addSessionRecordingsItem(course_id, subsection === 'pages_session-recordings')
 			}
 		}

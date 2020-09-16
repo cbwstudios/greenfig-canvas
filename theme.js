@@ -70,7 +70,7 @@ $(document).ready(function()
 	
 	function addSessionRecordingsItem(course_id, active)
 	{
-		const url = '/courses/'+course_id+'/pages/session-recordings'
+		const url = '/courses/'+course_id+'/pages/recordings'
 		
 		if($sectionTabs.children().length < 1)
 		{
@@ -88,7 +88,7 @@ $(document).ready(function()
 			className = 'active'
 		}
 		
-		const title = 'Session Recordings'
+		const title = 'Recordings'
 		$sectionTabs.append(
 			'<li class="section">' +
 				'<a href="' +url+ '" aria-label="' +title+ '" tabindex="0" title="' +title+ '" class="' +className+ '">' +title+ '<i role="presentation"></i></a>' +
@@ -144,7 +144,7 @@ $(document).ready(function()
 					addCalendarLinkItem(course_id)
 				
 				addHelpLinkItem(course_id, subsection === 'pages_support')
-				addSessionRecordingsItem(course_id, subsection === 'pages_session-recordings')
+				addSessionRecordingsItem(course_id, subsection === 'pages_recordings')
 			}
 		}
 		catch(e)

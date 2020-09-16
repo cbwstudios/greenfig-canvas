@@ -87,11 +87,13 @@ body:not(.home).pages.user_role_root_teacher
 	.tray-with-space-for-global-nav a[href$='/communication'],
 	#section-tabs a[href$='/communication'],
 	.ic-notification,
-	&.subsection_pages_session-recordings .header-bar-outer-container
+	&.subsection_pages_recordings .header-bar-outer-container
 	{ 
 		display: none; 
 	}	
 }
+
+
 
 /***************************
 ** Course Menu

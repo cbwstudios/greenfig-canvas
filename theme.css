@@ -346,8 +346,7 @@ video#bgvid {
 /***************************
 ** Home Tab Image Grid
 ***************************/
-.home-tab a { 
-	overflow:hidden; 
+.home-tab a {
 	display:inline-block; 
 }
 .home-tab .lock { 

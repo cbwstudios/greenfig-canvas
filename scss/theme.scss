@@ -486,3 +486,37 @@ video#bgvid
 	font-family: tinymce, Arial !important;
 }
 
+/***************************
+** Home Tab
+***************************/
+
+.home-tab {
+  
+  a {
+    display:inline-block; 
+  }
+  
+  .lock { 
+    position: relative; 
+    display: inline-block;
+  } 
+  
+  .date { 
+    font-family:Lato; 
+    font-weight:bold; 
+    position:absolute; 
+    left:50%; 
+    bottom:50px; 
+    width:200px; 
+    margin-left:-100px; 
+    padding: 5px 0; 
+    text-align:center; 
+    background:white; 
+    font-size:12px; 
+    color:#747474; 
+  }  
+  
+}
+
+
+

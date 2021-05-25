@@ -353,7 +353,7 @@ video#bgvid {
 	position: relative; 
 	display: inline-block;
 }
-.home-tab .lock span { 
+.home-tab .lock .date { 
 	font-family:Lato; 
 	font-weight:bold; 
 	position:absolute; 
